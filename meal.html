@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy Foods</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="shortcut icon" href="image/270630.png" type="image/x-icon">
+    <style>
+        @media screen and (max-width: 576px) {
+
+            .tryToFlex {
+                flex-direction: column;
+            }
+
+            .searchFood {
+                flex-direction: column;
+                margin-top: 30px;
+                margin-bottom: 40px;
+            }
+
+            .searchFoodBar {
+                flex-direction: column;
+                /* margin-top: 10px; */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main class=" tryToFlex">
+
+        <!-- search container -->
+        <section style="height:100px" class="d-flex searchFood justify-content-evenly align-items-center">
+            <h1 class="link-primary link-offset-2">Yummy Foods</h1>
+            <div class="d-flex searchFoodBar align-items-center gap-3">
+                <input id="search-field" type="text" class="px-3 py-2" placeholder="search your food">
+                <div>
+                    <button onclick="searchMeal()" class="btn btn-primary px-3 py-2">Search</button>
+                    <button onClick="window.location.reload();" class="btn btn-primary px-3 py-2">Refresh Page</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- meal section -->
+        <section class="container">
+            <div id="meals-container" class="row row-cols-1 row-cols-md-3 g-4">
+
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="mealDetails" tabindex="-1" aria-labelledby="mealDetailsLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-4" id="mealDetailsLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="mealDetailsBody">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+    <script src="js/meal.js"></script>
+</body>
+
+</html>
