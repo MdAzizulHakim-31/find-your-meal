@@ -37,6 +37,13 @@ const searchMeal = () => {
     console.log(searchText);
     loadMeals(searchText)
 }
+
+// search by Enter key
+document.getElementById('search-field').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        searchMeal();
+    }
+});
 // ----------------------------------------------
 
 const loadMealDetail = idMeal => {
